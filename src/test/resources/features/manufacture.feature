@@ -4,4 +4,3 @@ Feature: ManufactureModule
   Scenario: ololololol USer
     As a user a want lalala
     Given
-    Then oytun
