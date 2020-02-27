@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin = "pretty",
         features = "src/test/resources",
         glue = "steps_definitions",
-        dryRun = false,
-        tags = "@"
+        dryRun = true
+//        tags = "@"
 
 )
 public class CukesRunner {
