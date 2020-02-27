@@ -24,4 +24,12 @@ public class SeleniumUtils {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public static void pause(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

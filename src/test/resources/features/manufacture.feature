@@ -2,10 +2,10 @@
 Feature: ManufactureModule
   Agile Story: CN-169
 
-  Scenario: ololololol USer
-  As a user a want lalala
-  Given
 
+  Background:
+    Given user login as manager
+    Given user click manufacturing module
 
   @smokeTest@Manufacturing_module_Reporting
       #Manufacturing module Reporting Data
