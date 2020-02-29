@@ -18,7 +18,13 @@ public class ProductImportFilePage {
 
     @FindBy(xpath = "(//button[@type='button'])[8]")
     public WebElement cancelBtn;
+    ////*[@for='my-file-selector']
 
+    @FindBy(xpath = "//li[contains(text(), 'Import a File')]")
+    public WebElement pageTitle;
+
+    @FindBy(xpath = "//*[@placeholder='No file chosen...']")
+    public WebElement uploadFile;
 
 
 }
