@@ -31,7 +31,7 @@ public class LoginStepDefn {
 
   //  @Given("user login as manager")
     public void userLoginAsManager() {
-        Driver.getDriver().get("erbUrl");
+        Driver.getDriver().get("http://app.briteerp.com/web/login");
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
         wait.until(ExpectedConditions.visibilityOf(loginPage.username)).sendKeys(Config.getProperty("managerLogin"));
         //loginPage.username.sendKeys(Config.getProperty("managerLogin"));
