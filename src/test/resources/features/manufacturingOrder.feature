@@ -7,8 +7,7 @@ Feature: ManufacturingOrder
     Given user click manufacturing module
 
 
-  @smokeTest@ManufacturingOrder_Module
-    #Manufacturing module Reporting Data
+
 
 
 
