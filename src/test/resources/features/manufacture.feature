@@ -62,9 +62,9 @@ Feature: ManufactureModule
   Scenario: Check Save button in Unbuild Order module
     Given user is on the manufacturing module page
     When user click Unbuild Orders
-    Then user is being navigated to Unbuild Orders page
+
     When user click Create button
-    Then user is being navigated to New Unbuild Orders page
+
     When user chose any product from Product dropdown list
     And user put number in Quantity field
     And user click Save button
@@ -73,22 +73,21 @@ Feature: ManufactureModule
   Scenario: Check Discard button in Unbuild Order module
     Given user is on the manufacturing module page
     When user click Unbuild Orders
-    Then user is being navigated to Unbuild Orders page
+
     When user click Create button
-    Then user is being navigated to New Unbuild Orders page
+
     When user chose any product from Product dropdown list
     And user put number in Quantity field
     And user click Discard button
     Then user will see Warning message with Ok and Cancel buttons
-    When user clicks on Ok button
-    Then user will be return on Unbuild Orders page
+
   @UnbuilIvan
   Scenario: Check Unbuild button in Unbuild Order module
     Given user is on the manufacturing module page
     When user click Unbuild Orders
-    Then user is being navigated to Unbuild Orders page
+
     When user click Create button
-    Then user is being navigated to New Unbuild Orders page
+
     When user chose any product from Product dropdown list
     And user put number in Quantity field
     And user click Unbuild button
