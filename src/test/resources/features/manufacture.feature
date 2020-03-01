@@ -152,4 +152,27 @@ Feature: ManufactureModule
     When User Click on Delete Button
     Then User sees Confirmation Alert
     Then User Should be Delete the Order after Click on Ok button
+  @Kenje
+  Scenario: Validation of the Search button in the Manufacturing Page
+    Given user is on the Manufacturing Page
+    When user navigates to the Search bar
+    Then Search bar appears with To Do bar on the left side
+  @Kenje
+  Scenario: Activation Advance Search button
+    Given User is in the Search bar
+    When User clicks on the + button on the right in the Search bar
+    Then Filters, Group By, Favorites, number of search display pages appear under the Search bar
+  @Kenje
+  Scenario: Validation Filters dropdown button
+    Given user is on the Manufacturing Page
+    When User navigates to Filters dropdown button
+    And clicks on the Filters button
+    Then filter options displays in dropdown
+  @Kenje
+  Scenario: Validation of Group By button
+    Given User is in the Search bar
+    When User navigates to the Group By  dropdown button
+    And clicks on Group By button
+    Then Grouping options should display as a dropdown
+    
 
