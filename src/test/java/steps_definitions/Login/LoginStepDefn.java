@@ -14,6 +14,12 @@ public class LoginStepDefn {
 
     LoginPage loginPage = new LoginPage();
 
+    @Given("user click manufacturing module")
+    public void user_click_manufacturing_module() {
+        loginPage.managermanufacturingModule.click();
+        SeleniumUtils.pause(3);
+    }
+
    // @Given("user login as user")
     public void user_login_as_user() {
         Driver.getDriver().get(Config.getProperty("erbUrl"));
@@ -22,12 +28,6 @@ public class LoginStepDefn {
         loginPage.password.sendKeys(Config.getProperty("userPassword"));
         loginPage.loginBtn.click();
         loginPage.usermanufacturingModule.click();
-    }
-
-    @Given("user click manufacturing module")
-    public void user_click_manufacturing_module() {
-        loginPage.managermanufacturingModule.click();
-        SeleniumUtils.pause(3);
     }
 
 
@@ -60,16 +60,21 @@ public class LoginStepDefn {
             //loginPage.username.sendKeys(Config.getProperty("managerLogin"));
             loginPage.password.sendKeys(password);
             loginPage.loginBtn.click();
-            SeleniumUtils.pause(4);
+            SeleniumUtils.pause(5);
+            loginPage.usermanufacturingModule.click();
+            SeleniumUtils.pause(3);
 
         }
         else if(userType.equalsIgnoreCase("associate")){
             username = Config.getProperty("userLogin");
             password = Config.getProperty("userPassword");
             Driver.getDriver().get(Config.getProperty("erbUrl"));
-            loginPage.username.sendKeys(Config.getProperty("userLogin"));
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
+            wait.until(ExpectedConditions.visibilityOf(loginPage.username)).sendKeys(Config.getProperty("userLogin"));
+           // loginPage.username.sendKeys(Config.getProperty("userLogin"));
             loginPage.password.sendKeys(Config.getProperty("userPassword"));
             loginPage.loginBtn.click();
+            SeleniumUtils.pause(5);
             loginPage.usermanufacturingModule.click();
             SeleniumUtils.pause(3);
         }

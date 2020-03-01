@@ -28,7 +28,7 @@ public class BillsofMaterials {
     @When("user clicks the Bills of Materials")
     public void user_clicks_the_Bills_of_Materials() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
-        wait.until(ExpectedConditions.visibilityOf(main.managerbillsOfMaterials)).click();
+        wait.until(ExpectedConditions.visibilityOf(main.billsOfMaterials)).click();
     }
 
     @Then("Create button is displayed and enabled")
