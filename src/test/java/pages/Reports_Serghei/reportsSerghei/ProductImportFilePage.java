@@ -1,4 +1,4 @@
-package pages.reportsSerghei;
+package pages.Reports_Serghei.reportsSerghei;
 
 import utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +17,9 @@ public class ProductImportFilePage {
 
     @FindBy(xpath = "(//button[@type='button'])[8]")
     public WebElement cancelBtn;
+
+    @FindBy(xpath = "//li[contains(text(), 'Import a File')]")
+    public WebElement pageTitle;
 
 
 
