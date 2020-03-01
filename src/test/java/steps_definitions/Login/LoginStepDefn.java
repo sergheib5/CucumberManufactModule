@@ -24,7 +24,7 @@ public class LoginStepDefn {
         loginPage.usermanufacturingModule.click();
     }
 
-   // @Given("user click manufacturing module")
+    @Given("user click manufacturing module")
     public void user_click_manufacturing_module() {
         loginPage.managermanufacturingModule.click();
         SeleniumUtils.pause(3);
