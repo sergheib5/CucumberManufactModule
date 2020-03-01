@@ -3,13 +3,14 @@ package steps_definitions;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.junit.BeforeClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
 public class Hooks {
 
-    @Before()
+    @Before
     public void setUp(){
         // anything that run before every scenario
     }

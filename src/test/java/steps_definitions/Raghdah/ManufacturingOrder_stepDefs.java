@@ -25,11 +25,11 @@ public class ManufacturingOrder_stepDefs {
         Assert.assertTrue(true);
     }
 
-    @Given("user click manufacturing module")
-    public void user_click_manufacturing_module() {
-        wait.until(ExpectedConditions.elementToBeClickable(manufacturing.createButton)).click();
-        Assert.assertTrue("its not displayed",manufacturing.createButton.isDisplayed() );
-    }
+//    @Given("user click manufacturing module")
+//    public void user_click_manufacturing_module() {
+//        wait.until(ExpectedConditions.elementToBeClickable(manufacturing.createButton)).click();
+//        Assert.assertTrue("its not displayed",manufacturing.createButton.isDisplayed() );
+//    }
 
 
     @Given("User is on manufacturing order page")

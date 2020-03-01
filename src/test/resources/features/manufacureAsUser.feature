@@ -4,7 +4,7 @@ Feature: ManufactureModule
 
   Background:
     Given user login as "associate"
-    Given user click manufacturing module
+
 @printLabel
   Scenario: Products print labels as an associate
     Given user is on the manufacturing module
