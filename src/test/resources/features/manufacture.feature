@@ -63,9 +63,9 @@ Feature: ManufactureModule
   Scenario: Check Save button in Unbuild Order module
     Given user is on the manufacturing module page
     When user click Unbuild Orders
-    Then user is being navigated to Unbuild Orders page
+
     When user click Create button
-    Then user is being navigated to New Unbuild Orders page
+
     When user chose any product from Product dropdown list
     And user put number in Quantity field
     And user click Save button
@@ -74,22 +74,21 @@ Feature: ManufactureModule
   Scenario: Check Discard button in Unbuild Order module
     Given user is on the manufacturing module page
     When user click Unbuild Orders
-    Then user is being navigated to Unbuild Orders page
+
     When user click Create button
-    Then user is being navigated to New Unbuild Orders page
+
     When user chose any product from Product dropdown list
     And user put number in Quantity field
     And user click Discard button
     Then user will see Warning message with Ok and Cancel buttons
-    When user clicks on Ok button
-    Then user will be return on Unbuild Orders page
+
   @UnbuilIvan
   Scenario: Check Unbuild button in Unbuild Order module
     Given user is on the manufacturing module page
     When user click Unbuild Orders
-    Then user is being navigated to Unbuild Orders page
+
     When user click Create button
-    Then user is being navigated to New Unbuild Orders page
+
     When user chose any product from Product dropdown list
     And user put number in Quantity field
     And user click Unbuild button
@@ -154,4 +153,27 @@ Feature: ManufactureModule
     When User Click on Delete Button
     Then User sees Confirmation Alert
     Then User Should be Delete the Order after Click on Ok button
+  @Kenje
+  Scenario: Validation of the Search button in the Manufacturing Page
+    Given user is on the Manufacturing Page
+    When user navigates to the Search bar
+    Then Search bar appears with To Do bar on the left side
+  @Kenje
+  Scenario: Activation Advance Search button
+    Given User is in the Search bar
+    When User clicks on the + button on the right in the Search bar
+    Then Filters, Group By, Favorites, number of search display pages appear under the Search bar
+  @Kenje
+  Scenario: Validation Filters dropdown button
+    Given user is on the Manufacturing Page
+    When User navigates to Filters dropdown button
+    And clicks on the Filters button
+    Then filter options displays in dropdown
+  @Kenje
+  Scenario: Validation of Group By button
+    Given User is in the Search bar
+    When User navigates to the Group By  dropdown button
+    And clicks on Group By button
+    Then Grouping options should display as a dropdown
+    
 

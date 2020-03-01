@@ -29,7 +29,6 @@ public class Products_Step_def {
     @When("user clicks on product tab")
     public void user_clicks_on_product_tab() {
         main.products.click();
-
     }
 
     @Then("user is being navigated to products page and should be see all products with details")

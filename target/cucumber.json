@@ -1,0 +1,517 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7590827254,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user login as \"associate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"associate\"",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginStepDefn.userLoginAs(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 140564460,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user click manufacturing module",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_click_manufacturing_module()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 280361,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "Create a new manufacturing order Validation",
+        "description": "",
+        "id": "manufacturemodule;create-a-new-manufacturing-order-validation",
+        "after": [
+          {
+            "result": {
+              "duration": 56197,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 28745,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "User is on manufacturing order page",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_is_on_manufacturing_order_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 21509196,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "User clicks on Create Button",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_clicks_on_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27984,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "User will see a small window",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_will_see_a_small_window()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2473405019,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "User clicks on Product Box",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_clicks_on_Product_Box()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4111175412,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "User will send keys Book",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_will_send_keys_Book()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 108987,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "User will see\u0027[E-COM05] Book2\u0027 on the Product Box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027[E-COM05] Book2\u0027",
+                  "offset": 13
+                }
+              ],
+              "location": "ManufacturingOrder_stepDefs.user_will_see_on_the_Product_Box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51751491,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "User clicks on save Button",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_clicks_on_save_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31024,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "User Will see Warning Alert Window",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_Will_see_Warning_Alert_Window()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12824,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "User will clicks on X Button",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_will_clicks_on_X_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10507,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "The warning Alret window will close",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.the_warning_Alret_window_will_close()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Manufactoring_Module_Test_User"
+          },
+          {
+            "name": "@Raghdah"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4667276437,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user login as \"associate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"associate\"",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginStepDefn.userLoginAs(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 109595309,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user click manufacturing module",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_click_manufacturing_module()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 31857,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 56,
+        "name": "Import a new manufacturing order Validation",
+        "description": "",
+        "id": "manufacturemodule;import-a-new-manufacturing-order-validation",
+        "after": [
+          {
+            "result": {
+              "duration": 34028,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22159,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "User is on manufacturing order page",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_is_on_manufacturing_order_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49554391,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "User clicks on Import Button",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_clicks_on_Import_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28080,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "A small window from the user computer will display on the page",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.a_small_window_from_the_user_computer_will_display_on_the_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10982,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "User will clicks on Load File Button",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_will_clicks_on_Load_File_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71887,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "User will clicks on the Cancel Button",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_will_clicks_on_the_Cancel_Button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 48808,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "A small window from the user computer should be canceled",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.a_small_window_from_the_user_computer_should_be_canceled()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Manufactoring_Module_Test_User"
+          },
+          {
+            "name": "@Raghdah"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4316673894,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user login as \"associate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"associate\"",
+                  "offset": 14
+                }
+              ],
+              "location": "LoginStepDefn.userLoginAs(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 106550278,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user click manufacturing module",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_click_manufacturing_module()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 27897,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 65,
+        "name": "Reference Check Box Validation",
+        "description": "",
+        "id": "manufacturemodule;reference-check-box-validation",
+        "after": [
+          {
+            "result": {
+              "duration": 15123,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 33102,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "User is on manufacturing order page",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_is_on_manufacturing_order_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 86023753,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "User clicks on Reference check Box",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_clicks_on_Reference_check_Box()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 29167,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "User will see a check mark on all manufacturing orders check Boxes",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_will_see_a_check_mark_on_all_manufacturing_orders_check_Boxes()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35382094,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "User clicks on Reference Check Box",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.user_clicks_on_Reference_Check_Box()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27283,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "All check marks should be removed from all manufacturing orders",
+            "match": {
+              "location": "ManufacturingOrder_stepDefs.all_check_marks_should_be_removed_from_all_manufacturing_orders()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Manufactoring_Module_Test_User"
+          },
+          {
+            "name": "@Raghdah"
+          }
+        ]
+      }
+    ],
+    "name": "ManufactureModule",
+    "description": "  Agile Story: CN-169",
+    "id": "manufacturemodule",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/manufacureAsUser.feature",
+    "tags": [
+      {
+        "name": "@Manufactoring_Module_Test_User",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
