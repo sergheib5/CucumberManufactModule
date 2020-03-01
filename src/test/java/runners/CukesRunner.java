@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = "steps_definitions",
         dryRun = false,
-        tags =  "@Manufacturing_module_Products1"
+        tags =  "@importButton"
 
 
 
