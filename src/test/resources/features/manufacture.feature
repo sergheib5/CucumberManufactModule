@@ -1,4 +1,3 @@
-@Manufacturing_module_Test
 Feature: ManufactureModule
   Agile Story: CN-169
 
@@ -100,6 +99,31 @@ Feature: ManufactureModule
 
 
 
+@oytun
+  Scenario: Create A New Manufactoring Order
+    Given User is on the Manufacturing Order page
+    And User verify Create button at the top of the page
+    And the user is taken to the Create New Manufacturing Orders page after clickin the Create button
+    And User verify Product Dropdown on the page
+    And User verify Quantity To Produce Button on the page and 1.000  as the default value
+    And User verify Bill of Material Dropdown Button on the page
+    And User verify Deadline Start Button on the page
+    And User verify Responsible Dropdown Button on the page
+    And User verify Source Button on the page
+    And User verify Save Button on the page
+    And User verify Discard Button is on the at the top of the page
+    When User click on Save button after Fill out all required fields
+    Then User sees message on the screen
 
-
+ @oytun
+  Scenario: Delete Production Order
+    Given User is on the Manufacturing Order page
+    And User verify Create button at the top of the page
+    And User sees all  Manufactoring Orders  on the page
+    And User verify check box buttons are Enable
+    When User select a Manufacturing Order check box
+    Then User verify Print Dropdown button and  Action Dropdown button are enable
+    When User Click on Delete Button
+    Then User sees Confirmation Alert
+    Then User Should be Delete the Order after Click on Ok button
 
