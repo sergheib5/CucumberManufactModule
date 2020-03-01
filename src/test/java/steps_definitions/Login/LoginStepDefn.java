@@ -63,7 +63,6 @@ public class LoginStepDefn {
             SeleniumUtils.pause(5);
             loginPage.usermanufacturingModule.click();
             SeleniumUtils.pause(3);
-
         }
         else if(userType.equalsIgnoreCase("associate")){
             username = Config.getProperty("userLogin");
