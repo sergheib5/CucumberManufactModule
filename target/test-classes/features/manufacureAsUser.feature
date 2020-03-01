@@ -3,7 +3,7 @@ Feature: ManufactureModule
   Agile Story: CN-169
 
   Background:
-    Given user login as "associate"
+    Given user login as "assgiociate"
     Given user click manufacturing module
 @printLabel
   Scenario: Products print labels as an associate
