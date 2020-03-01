@@ -7,6 +7,9 @@
     <artifactId>CucumberManufactModule</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -44,4 +47,55 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-compiler-plugin</artifactId>
+                            <version>3.0</version>
+                            <configuration>
+                                <source>1.8</source>
+                                <target>1.8</target>
+                            </configuration>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>2.18.1</version>
+                            <configuration>
+                                <includes>
+                                    <exclude>**/*CukesRunner.java</exclude>
+                                </includes>
+                            </configuration>
+                        </plugin>
+
+
+                        <plugin>
+                            <groupId>net.masterthought</groupId>
+                            <artifactId>maven-cucumber-reporting</artifactId>
+                            <version>3.15.0</version>
+                            <executions>
+                                <execution>
+                                    <id>execution</id>
+                                    <phase>verify</phase>
+                                    <goals>
+                                        <goal>generate</goal>
+                                    </goals>
+                                    <configuration>
+                                        <projectName>CucumberManufactModule</projectName>
+                                        <outputDirectory>${project.build.directory}/cucumber-JVM-reports</outputDirectory>
+                                        <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+            <!--                            <skippedFails>true</skippedFails>-->
+            <!--                            <enableFlashFails>true</enableFlashFails>-->
+                                        <buildNumber>42</buildNumber>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>
+
+        </plugins>
+    </build>
+
+
 </project>

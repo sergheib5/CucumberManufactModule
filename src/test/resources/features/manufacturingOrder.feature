@@ -1,10 +1,9 @@
-
 @ManufacturingOrder_Module
 Feature: ManufacturingOrder
 
   Background:
-    Given user login as a User
-    Given user click manufacturing module
+    Given user login as "associate"
+
 
 
   @smokeTest@ManufacturingOrder_Module

@@ -1,10 +1,11 @@
+@ManufacturingOrder_Module
 Feature: ManufactureModule
   Agile Story: CN-169
 
 
   Background:
     Given user login as "manager"
-    Given user click manufacturing module
+
 
   @smokeTest@Manufacturing_module_Reporting
       #Manufacturing module Reporting Data

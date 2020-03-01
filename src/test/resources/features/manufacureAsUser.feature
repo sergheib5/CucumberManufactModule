@@ -1,10 +1,10 @@
-@Manufactoring_Module_Test_User
+@Manufactoring_Module_Test_User @ManufacturingOrder_Module
 Feature: ManufactureModule
   Agile Story: CN-169
 
   Background:
-    Given user login as "assgiociate"
-    Given user click manufacturing module
+    Given user login as "associate"
+
 @printLabel
   Scenario: Products print labels as an associate
     Given user is on the manufacturing module
