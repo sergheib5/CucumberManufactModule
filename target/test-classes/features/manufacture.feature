@@ -6,7 +6,7 @@ Feature: ManufactureModule
 
   Background:
     Given user login as "manager"
-    Given user click manufacturing module
+
 
   @smokeTest@Manufacturing_module_Reporting
       #Manufacturing module Reporting Data

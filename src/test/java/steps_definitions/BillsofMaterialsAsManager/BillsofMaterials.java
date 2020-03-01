@@ -33,6 +33,7 @@ public class BillsofMaterials {
     public void user_clicks_the_Bills_of_Materials() throws MalformedURLException {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
        wait.until(ExpectedConditions.visibilityOf(main.billsOfMaterials)).click();
+       SeleniumUtils.pause(3);
     }
 
     @Then("Create button is displayed and enabled")

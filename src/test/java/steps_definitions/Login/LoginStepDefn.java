@@ -66,6 +66,8 @@ public class LoginStepDefn {
             loginPage.password.sendKeys(password);
             loginPage.loginBtn.click();
             SeleniumUtils.pause(4);
+            loginPage.usermanufacturingModule.click();
+            SeleniumUtils.pause(3);
 
         }
         else if(userType.equalsIgnoreCase("associate")){
@@ -75,6 +77,7 @@ public class LoginStepDefn {
             loginPage.username.sendKeys(Config.getProperty("userLogin"));
             loginPage.password.sendKeys(Config.getProperty("userPassword"));
             loginPage.loginBtn.click();
+            SeleniumUtils.pause(4);
             loginPage.usermanufacturingModule.click();
             SeleniumUtils.pause(3);
         }
