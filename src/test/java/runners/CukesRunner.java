@@ -6,14 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {
-               "pretty", "html:target/cucumber-html-report",
-                "json:target/cucumber.json", "junit:target/cucumber.xml",
-                "rerun:target/rerun.txt"},
+        plugin = {"html:target/cucumber-reports",
+        "json:target/cucumber.json"},
         features = "src/test/resources",
         glue = "steps_definitions",
         dryRun = false,
-        tags = "@Manufacturing_module_Test"
+        tags =  "@Manufacturing_module_Products1"
+
+
 
 
 )

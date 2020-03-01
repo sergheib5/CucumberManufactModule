@@ -1,4 +1,4 @@
-package pages.reportsSerghei;
+package pages.Reports_Serghei.reportsSerghei;
 
 import utilities.Config;
 import utilities.Driver;
