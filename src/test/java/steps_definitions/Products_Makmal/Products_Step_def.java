@@ -15,6 +15,8 @@ import pages.ProductsMakmal.*;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
+
 public class Products_Step_def {
 
     LoginPage loginPage = new LoginPage();
@@ -24,6 +26,9 @@ public class Products_Step_def {
     New_page_save new_page_save = new New_page_save();
     New_products_page new_products_page = new New_products_page();
     EditButtonPage editButtonPage = new EditButtonPage();
+
+    public Products_Step_def() throws MalformedURLException {
+    }
 
 
     @When("user clicks on product tab")
@@ -53,7 +58,7 @@ public class Products_Step_def {
     }
 
     @Then("it should navigate to new page")
-    public void it_should_navigate_to_new_page() {
+    public void it_should_navigate_to_new_page() throws MalformedURLException {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
         wait.until(ExpectedConditions.titleIs("New - Odoo"));
     }
@@ -71,7 +76,7 @@ public class Products_Step_def {
     }
 
     @Then("user should be able to see dropdown Category is on option All")
-    public void user_should_be_able_to_see_dropdown_Category_is_on_option_All() {
+    public void user_should_be_able_to_see_dropdown_Category_is_on_option_All() throws MalformedURLException {
         Actions actions= new Actions(Driver.getDriver());
         actions.moveToElement(new_page_save.dropdownCategory).perform();
         actions.click().perform();
@@ -109,7 +114,7 @@ public class Products_Step_def {
     }
 
     @Then("user  should be able edit and save product information")
-    public void user_should_be_able_edit_and_save_product_information() {
+    public void user_should_be_able_edit_and_save_product_information() throws MalformedURLException {
         new_page_save.inputText.clear();
         new_page_save.inputText.sendKeys("Book2");
         new_page_save.saveButton.click();

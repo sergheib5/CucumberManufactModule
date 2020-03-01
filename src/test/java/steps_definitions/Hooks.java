@@ -7,6 +7,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
+import java.net.MalformedURLException;
+
 public class Hooks {
 
     @Before()
@@ -15,7 +17,7 @@ public class Hooks {
     }
 
     @After
-    public void tearDown(Scenario scenario){
+    public void tearDown(Scenario scenario) throws MalformedURLException {
      if(scenario.isFailed()){
          byte [] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
          scenario.embed(screenshot, "image/png");

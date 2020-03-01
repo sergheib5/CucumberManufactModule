@@ -1,3 +1,5 @@
+
+@parallelTestingWithCucumber
 Feature: ManufactureModule
   Agile Story: CN-169
 
@@ -174,5 +176,9 @@ Feature: ManufactureModule
     When User navigates to the Group By  dropdown button
     And clicks on Group By button
     Then Grouping options should display as a dropdown
-    
 
+@last
+  Scenario: Get Order List
+    Given User is on the Manufacturing Order page
+    And User able to sees manufacruring order
+    Then User can write last 10 order to Excel file

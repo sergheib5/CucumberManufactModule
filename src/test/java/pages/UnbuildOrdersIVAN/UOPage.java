@@ -6,8 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.net.MalformedURLException;
+
 public class UOPage {
-    public UOPage(){PageFactory.initElements(Driver.getDriver(),this);
+    public UOPage() throws MalformedURLException {PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_list_button_add']")
     public WebElement CreateButton;

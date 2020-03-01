@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.net.MalformedURLException;
+
 public class ManufacturingOrders_Raghdah {
 
-    public ManufacturingOrders_Raghdah(){
+    public ManufacturingOrders_Raghdah() throws MalformedURLException {
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[1]/div/button[1]")
@@ -22,7 +24,7 @@ public class ManufacturingOrders_Raghdah {
     public WebElement cancelButton;
     @FindBy(xpath = "//input[@class='o_input ui-autocomplete-input']")
     public WebElement productBox;
-    @FindBy(xpath = "//*[@id='o_field_input_274']")
+    @FindBy(xpath = "(//div[@class='o_input_dropdown']//input)[1]")
     public WebElement firstProductSelection;
     @FindBy(xpath ="//span[.='Ok']")
     public  WebElement xButton;

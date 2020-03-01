@@ -1,4 +1,5 @@
-@Manufacturing_module_Test
+
+@parallelTestingWithCucumber
 Feature: ManufactureModule
   Agile Story: CN-169
 
@@ -94,11 +95,90 @@ Feature: ManufactureModule
     And user click Unbuild button
     Then the message Unbuild Order Created is displayed
 
+  Scenario: User should be able to create a material
+    When user clicks the Bills of Materials
+    Then Create button is displayed and enabled
+    When user clicks on Create button
+    Then Quantity button,save button and discard button are displayed and enabled
+    And reference button is displayed, and Bom type radio buttons are displayed and by default manufacture this product is selected
+    When user clicks Product Dropdown Button and choose first product
+    And user clears and provides quantity information
+    And user provides reference information
+    And user clicks to the Save button
+  Scenario: user should be able to import file
+    When user clicks the Bills of Materials
+    Then import button is displayed and enabled
+    When user clicks on import button on the bills of materials page
+    Then import button, reload and test import button are displayed but not enabled
+    And  load file button and cancel button are displayed and enabled
+  Scenario: user should be able to delete a material
+    When user clicks the Bills of Materials
+    Then all checkboxes are enabled
+    When user clicks one of the check boxes
+    Then action dropdown is displayed and enabled
+    When user clicks action button
+    Then  Export, Archive, Unarchive, Delete options appear respectively
+    And user clicks delete button
+    Then confirmation alert is displayed
+    And user clicks ok on the alert
 
 
 
 
 
 
+@oytun
+  Scenario: Create A New Manufactoring Order
+    Given User is on the Manufacturing Order page
+    And User verify Create button at the top of the page
+    And the user is taken to the Create New Manufacturing Orders page after clickin the Create button
+    And User verify Product Dropdown on the page
+    And User verify Quantity To Produce Button on the page and 1.000  as the default value
+    And User verify Bill of Material Dropdown Button on the page
+    And User verify Deadline Start Button on the page
+    And User verify Responsible Dropdown Button on the page
+    And User verify Source Button on the page
+    And User verify Save Button on the page
+    And User verify Discard Button is on the at the top of the page
+    When User click on Save button after Fill out all required fields
+    Then User sees message on the screen
 
+ @oytun
+  Scenario: Delete Production Order
+    Given User is on the Manufacturing Order page
+    And User verify Create button at the top of the page
+    And User sees all  Manufactoring Orders  on the page
+    And User verify check box buttons are Enable
+    When User select a Manufacturing Order check box
+    Then User verify Print Dropdown button and  Action Dropdown button are enable
+    When User Click on Delete Button
+    Then User sees Confirmation Alert
+    Then User Should be Delete the Order after Click on Ok button
+  @Kenje
+  Scenario: Validation of the Search button in the Manufacturing Page
+    Given user is on the Manufacturing Page
+    When user navigates to the Search bar
+    Then Search bar appears with To Do bar on the left side
+  @Kenje
+  Scenario: Activation Advance Search button
+    Given User is in the Search bar
+    When User clicks on the + button on the right in the Search bar
+    Then Filters, Group By, Favorites, number of search display pages appear under the Search bar
+  @Kenje
+  Scenario: Validation Filters dropdown button
+    Given user is on the Manufacturing Page
+    When User navigates to Filters dropdown button
+    And clicks on the Filters button
+    Then filter options displays in dropdown
+  @Kenje
+  Scenario: Validation of Group By button
+    Given User is in the Search bar
+    When User navigates to the Group By  dropdown button
+    And clicks on Group By button
+    Then Grouping options should display as a dropdown
 
+@last
+  Scenario: Get Order List
+    Given User is on the Manufacturing Order page
+    And User able to sees manufacruring order
+    Then User can write last 10 order to Excel file

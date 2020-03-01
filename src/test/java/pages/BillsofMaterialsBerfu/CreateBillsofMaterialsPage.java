@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.net.MalformedURLException;
+
 public class CreateBillsofMaterialsPage {
-    public CreateBillsofMaterialsPage(){
+    public CreateBillsofMaterialsPage() throws MalformedURLException {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

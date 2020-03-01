@@ -10,12 +10,17 @@ import utilities.Config;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
+
 public class LoginStepDefn {
 
     LoginPage loginPage = new LoginPage();
 
-   // @Given("user login as user")
-    public void user_login_as_user() {
+    public LoginStepDefn() throws MalformedURLException {
+    }
+
+    // @Given("user login as user")
+    public void user_login_as_user() throws MalformedURLException {
         Driver.getDriver().get(Config.getProperty("erbUrl"));
         LoginPage loginPage = new LoginPage();
         loginPage.username.sendKeys(Config.getProperty("userLogin"));
@@ -32,7 +37,7 @@ public class LoginStepDefn {
 
 
   //  @Given("user login as manager")
-    public void userLoginAsManager() {
+    public void userLoginAsManager() throws MalformedURLException {
 
         Driver.getDriver().get(Config.getProperty("erbUrl"));
 
@@ -46,7 +51,7 @@ public class LoginStepDefn {
     }
 
     @Given("user login as {string}")
-    public void userLoginAs(String userType) {
+    public void userLoginAs(String userType) throws MalformedURLException {
 
         String username = null ;
         String password = null;

@@ -7,8 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Config;
 import utilities.Driver;
 
+import java.net.MalformedURLException;
+
 public class UserProductPage {
-    public UserProductPage(){
+    public UserProductPage() throws MalformedURLException {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     String productNum = Config.getProperty("Productnumber");

@@ -11,6 +11,7 @@ import pages.UnbuildOrdersIVAN.UOPage;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
 import java.util.Random;
 
 public class Unbuild_Step_Def {
@@ -24,6 +25,9 @@ public class Unbuild_Step_Def {
     UONewPage quantityField = new UONewPage();
     UONewPage discardButton = new UONewPage();
     UONewPage unbuildButton = new UONewPage();
+
+    public Unbuild_Step_Def() throws MalformedURLException {
+    }
 
     @Given("user is on the manufacturing module page")
     public void user_is_on_the_manufacturing_module_page() {
@@ -43,7 +47,7 @@ public class Unbuild_Step_Def {
 
 
     @When("user chose any product from Product dropdown list")
-    public void user_chose_any_product_from_Product_dropdown_list() {
+    public void user_chose_any_product_from_Product_dropdown_list() throws MalformedURLException {
         productField.ProductField.click();
         Random random = new Random();
         int numOfDropDown = random.nextInt(4)+1;
@@ -67,7 +71,7 @@ public class Unbuild_Step_Def {
 
 
     @Then("the message Unbuild Order Created is displayed")
-    public void the_message_Unbuild_Order_Created_is_displayed() {
+    public void the_message_Unbuild_Order_Created_is_displayed() throws MalformedURLException {
         boolean actualResult = Driver.getDriver().findElement(By.xpath("//div[@class='o_thread_message_content']")).isDisplayed();
         Assert.assertTrue("Unbuild Order created is DISPLAYED",actualResult);
     }
@@ -80,7 +84,7 @@ public class Unbuild_Step_Def {
 
 
     @Then("user will see Warning message with Ok and Cancel buttons")
-    public void user_will_see_Warning_message_with_Ok_and_Cancel_buttons() {
+    public void user_will_see_Warning_message_with_Ok_and_Cancel_buttons() throws MalformedURLException {
         boolean actualResult = Driver.getDriver().findElement(By.xpath("//h4[@class='modal-title']")).isDisplayed();
         Assert.assertTrue("Warning is DISPLAYED",actualResult);
     }

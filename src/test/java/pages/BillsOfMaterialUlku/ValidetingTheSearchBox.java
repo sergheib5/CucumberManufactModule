@@ -6,12 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class ValidetingTheSearchBox {
 
 
-    public ValidetingTheSearchBox(){
+    public ValidetingTheSearchBox() throws MalformedURLException {
 
             PageFactory.initElements(Driver.getDriver(),this);
 
@@ -23,7 +24,7 @@ public class ValidetingTheSearchBox {
 //    @FindBy(xpath="//td[@class='o_data_cell o_readonly_modifier o_required_modifier']")
 //    public WebElement IphoneExpected;
 
-    public List<WebElement> getAllresults (){
+    public List<WebElement> getAllresults () throws MalformedURLException {
         return Driver.getDriver().findElements(By.xpath("//td[@class='o_data_cell o_readonly_modifier o_required_modifier']"));
     }
 

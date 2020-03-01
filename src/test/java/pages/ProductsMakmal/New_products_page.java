@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.net.MalformedURLException;
+
 public class New_products_page {
 
-    public New_products_page(){
+    public New_products_page() throws MalformedURLException {
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "//input[@class = 'o_searchview_input']")

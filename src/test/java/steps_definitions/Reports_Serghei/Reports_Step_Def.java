@@ -15,6 +15,8 @@ import pages.Reports_Serghei.UserProductPage;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
+
 public class Reports_Step_Def {
 
     MainPageKenje mainPageKenje = new MainPageKenje();
@@ -24,6 +26,9 @@ public class Reports_Step_Def {
     UserProductPage userProductPage = new UserProductPage();
 
     ProductImportFilePage productImportFilePage = new ProductImportFilePage();
+
+    public Reports_Step_Def() throws MalformedURLException {
+    }
 
     @Given("user is on the manufacturing module")
     public void user_is_on_the_manufacturing_module() {
@@ -103,7 +108,7 @@ public class Reports_Step_Def {
     }
 
     @Then("the product page is being displayed")
-    public void the_product_page_is_being_displayed() {
+    public void the_product_page_is_being_displayed() throws MalformedURLException {
         String titleExpected = products.productName.getText().toLowerCase();
         String titleActual = Driver.getDriver().getTitle().toLowerCase();
         Assert.assertTrue("title is correct", titleActual.contains(titleExpected));
@@ -111,7 +116,7 @@ public class Reports_Step_Def {
     }
 
     @Then("user clicks on print button")
-    public void user_clicks_on_print_button() {
+    public void user_clicks_on_print_button() throws MalformedURLException {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
         wait.until(ExpectedConditions.visibilityOf(userProductPage.printBtn));
         userProductPage.printBtn.click();

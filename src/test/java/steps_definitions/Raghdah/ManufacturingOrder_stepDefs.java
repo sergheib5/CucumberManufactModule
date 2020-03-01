@@ -13,6 +13,7 @@ import pages.ManufacturingOrders_Raghdah;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
 import java.security.Key;
 
 public class ManufacturingOrder_stepDefs {
@@ -20,16 +21,19 @@ public class ManufacturingOrder_stepDefs {
     ManufacturingOrders_Raghdah manufacturing = new ManufacturingOrders_Raghdah();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
 
+    public ManufacturingOrder_stepDefs() throws MalformedURLException {
+    }
+
     @Given("user login as a User")
     public void user_login_as_a_User() {
         Assert.assertTrue(true);
     }
 
-    @Given("user click manufacturing module")
-    public void user_click_manufacturing_module() {
-        wait.until(ExpectedConditions.elementToBeClickable(manufacturing.createButton)).click();
-        Assert.assertTrue("its not displayed",manufacturing.createButton.isDisplayed() );
-    }
+//    @Given("user click manufacturing module")
+//    public void user_click_manufacturing_module() {
+//        wait.until(ExpectedConditions.elementToBeClickable(manufacturing.createButton)).click();
+//        Assert.assertTrue("its not displayed",manufacturing.createButton.isDisplayed() );
+//    }
 
 
     @Given("User is on manufacturing order page")

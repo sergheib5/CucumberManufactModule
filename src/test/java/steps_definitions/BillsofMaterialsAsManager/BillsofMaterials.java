@@ -13,6 +13,7 @@ import pages.MainPageKenje.MainPageKenje;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -25,10 +26,13 @@ public class BillsofMaterials {
     pages.BillsofMaterialsBerfu.BillsOfMaterialsHomePage BillsOfMaterialsHomePage= new BillsOfMaterialsHomePage();
     List<WebElement> l;
 
+    public BillsofMaterials() throws MalformedURLException {
+    }
+
     @When("user clicks the Bills of Materials")
-    public void user_clicks_the_Bills_of_Materials() {
+    public void user_clicks_the_Bills_of_Materials() throws MalformedURLException {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
-        wait.until(ExpectedConditions.visibilityOf(main.managerbillsOfMaterials)).click();
+       wait.until(ExpectedConditions.visibilityOf(main.billsOfMaterials)).click();
     }
 
     @Then("Create button is displayed and enabled")
@@ -115,7 +119,7 @@ public class BillsofMaterials {
     }
 
     @Then("all checkboxes are enabled")
-    public void all_checkboxes_are_enabled() {
+    public void all_checkboxes_are_enabled() throws MalformedURLException {
         List<WebElement> list= BillsOfMaterialsHomePage.getAllCheckBoxes();
         SeleniumUtils.pause(2);
         for(int i=0; i< list.size(); i++ ){
@@ -125,7 +129,7 @@ public class BillsofMaterials {
     }
 
     @When("user clicks one of the check boxes")
-    public void user_clicks_one_of_the_check_boxes() {
+    public void user_clicks_one_of_the_check_boxes() throws MalformedURLException {
         WebElement onecheckbox= BillsOfMaterialsHomePage.getAllCheckBoxes().get(7);
         onecheckbox.click();
         SeleniumUtils.pause(2);
@@ -143,7 +147,7 @@ public class BillsofMaterials {
     }
 
     @Then("Export, Archive, Unarchive, Delete options appear respectively")
-    public void export_Archive_Unarchive_Delete_options_appear_respectively() {
+    public void export_Archive_Unarchive_Delete_options_appear_respectively() throws MalformedURLException {
         l = BillsOfMaterialsHomePage.getAllActionOptions();
         List <String> nameofList= new ArrayList<>();
         for(WebElement each: l){

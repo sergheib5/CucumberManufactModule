@@ -6,10 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import javax.swing.plaf.PanelUI;
+import java.net.MalformedURLException;
 
 public class MainPageKenje {
 
-    public MainPageKenje(){
+    public MainPageKenje() throws MalformedURLException {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

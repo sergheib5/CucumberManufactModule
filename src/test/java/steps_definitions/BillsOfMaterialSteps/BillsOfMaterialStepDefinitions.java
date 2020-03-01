@@ -16,6 +16,7 @@ import pages.MainPageKenje.MainPageKenje;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 
@@ -25,6 +26,9 @@ public class BillsOfMaterialStepDefinitions {
     ValidetingTheSearchBox search=new ValidetingTheSearchBox();
     private SeleniumUtils SeleniumUtil;
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
+
+    public BillsOfMaterialStepDefinitions() throws MalformedURLException {
+    }
 
     @And("User clicks on search box")
     public void userClicksOnSearchBox() {
@@ -52,7 +56,7 @@ public class BillsOfMaterialStepDefinitions {
     }
 
     @Then("User should be able to see related search")
-    public void user_should_be_able_to_see_related_search() {
+    public void user_should_be_able_to_see_related_search() throws MalformedURLException {
         String expectedResult="iphone";
         SeleniumUtil.pause(5);
         List<WebElement> l= search.getAllresults();

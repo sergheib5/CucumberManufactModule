@@ -11,11 +11,16 @@ import pages.MainPageKenje.MainPageKenje;
 import utilities.Driver;
 import utilities.SeleniumUtils;
 
+import java.net.MalformedURLException;
+
 public class mainPageValidationStepDefKenje {
 
     MainPageKenje mainPageKenje = new MainPageKenje();
     private SeleniumUtils SeleniumUtil;
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
+
+    public mainPageValidationStepDefKenje() throws MalformedURLException {
+    }
 
 
     @Given("user clicks on manufacturing module")
