@@ -38,3 +38,5 @@ Feature: ManufactureModule
     And User choose any item
     And User clicks on print button
     Then  User should be able to see print of materials
+
+
