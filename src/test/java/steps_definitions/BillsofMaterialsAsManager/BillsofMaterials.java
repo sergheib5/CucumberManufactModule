@@ -6,12 +6,12 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utilities.Driver;
+import utilities.SeleniumUtils;
 import pages.BillsofMaterialsBerfu.BillsOfMaterialsHomePage;
 import pages.BillsofMaterialsBerfu.CreateBillsofMaterialsPage;
 import pages.BillsofMaterialsBerfu.ImportFilePage;
 import pages.MainPageKenje.MainPageKenje;
-import utilities.Driver;
-import utilities.SeleniumUtils;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class BillsofMaterials {
 
-    MainPageKenje main=new MainPageKenje();
+    MainPageKenje  main=new MainPageKenje();
     CreateBillsofMaterialsPage createMaterialPage = new CreateBillsofMaterialsPage();
     ImportFilePage importFilePage = new ImportFilePage();
     pages.BillsofMaterialsBerfu.BillsOfMaterialsHomePage BillsOfMaterialsHomePage= new BillsOfMaterialsHomePage();
