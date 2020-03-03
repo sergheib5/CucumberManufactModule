@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CucumberManufactureModule" />
         <module name="CucumberManufactModuleLastVersion" />
+        <module name="CucumberManufactModuleoytun" />
         <module name="CucumberManufactModule" />
       </profile>
     </annotationProcessing>
