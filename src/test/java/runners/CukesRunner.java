@@ -21,7 +21,7 @@ import utilities.SeleniumUtils;
         features = "src/test/resources/features",
         glue = "steps_definitions",
         dryRun = false,
-        tags = "@ManufacturingOrder_Module"
+        tags = "@postjob"
 
 
 )
@@ -31,19 +31,19 @@ public class CukesRunner {
 
     @BeforeClass
     public static void setUp(){
-        String username = null ;
-        String password = null;
-        username = Config.getProperty("managerLogin");
-        password = Config.getProperty("managerPassword");
-        Driver.getDriver().get(Config.getProperty("erbUrl"));
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
-        wait.until(ExpectedConditions.visibilityOf(loginPage.username)).sendKeys(username);
-        //loginPage.username.sendKeys(Config.getProperty("managerLogin"));
-        loginPage.password.sendKeys(password);
-        loginPage.loginBtn.click();
-        SeleniumUtils.pause(5);
-        loginPage.usermanufacturingModule.click();
-        SeleniumUtils.pause(3);
+//        String username = null ;
+//        String password = null;
+//        username = Config.getProperty("managerLogin");
+//        password = Config.getProperty("managerPassword");
+//        Driver.getDriver().get(Config.getProperty("erbUrl"));
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
+//        wait.until(ExpectedConditions.visibilityOf(loginPage.username)).sendKeys(username);
+//        //loginPage.username.sendKeys(Config.getProperty("managerLogin"));
+//        loginPage.password.sendKeys(password);
+//        loginPage.loginBtn.click();
+//        SeleniumUtils.pause(5);
+//        loginPage.usermanufacturingModule.click();
+//        SeleniumUtils.pause(3);
 
     }
 }
