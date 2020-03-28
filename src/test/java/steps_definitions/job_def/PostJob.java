@@ -2,7 +2,6 @@ package steps_definitions.job_def;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.Alert;
 import pages.job.Dice_page;
 import utilities.Config;
 import utilities.Driver;
@@ -51,8 +50,6 @@ public class PostJob {
         dice_page.uploadBtn.sendKeys("C:/Users/Serghei/Desktop/S_Buciuscan_Resume.pdf");
         SeleniumUtils.pause(2);
         dice_page.noChanges.click();
-
-
     }
 
     @Then("user saved the profile")

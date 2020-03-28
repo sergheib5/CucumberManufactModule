@@ -21,7 +21,7 @@ import utilities.SeleniumUtils;
         features = "src/test/resources/features",
         glue = "steps_definitions",
         dryRun = false,
-        tags = "@postjob"
+        tags = "@ManufacturingOrder_Module"
 
 
 )
